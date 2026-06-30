@@ -6,3 +6,6 @@ The system is designed around components that processes files representing contr
 The system also generates structured outputs at each stage of the pipeline, ensuring that every transformation step is transparent and traceable. These outputs include serialized contract data, cryptographic hashes, and signature verification results.
 
 A core feature of the design is its ability to synthesizes multiple data sources into a unified contract representation. This ensures that all relevant inputs are combined consistently before signing occurs.
+Additionally, the system supports cross-reference validation, allowing contracts to be checked against previously stored hashes or records. This ensures integrity across multiple runs and enables lightweight auditing behavior.
+
+Overall, this repository is intended for developers learning how file-based workflows can be structured into secure, verifiable contract systems.
