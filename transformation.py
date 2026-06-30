@@ -46,3 +46,25 @@ def pipeline():
 
     signature = sign(h, "file_secret_key")
     valid = verify(h, signature, "file_secret_key")
+
+    print("Hash:", h)
+    print("Signature:", signature)
+    print("Valid:", valid)
+
+    return store, h
+
+def cross_reference(store, filename):
+    print("\nCross Reference:")
+    print(store.read(filename))
+
+def outputs():
+    print("\nOutputs generated successfully")
+
+def main():
+    store, h = pipeline()
+    cross_reference(store, "contract.json")
+    outputs()
+    print("Done")
+
+if __name__ == "__main__":
+    main()
